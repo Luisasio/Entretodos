@@ -1,3 +1,11 @@
+<?php
+session_name('sesion_maestro');
+session_start();
+if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
+    header("Location: ../index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -56,6 +64,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cerrar_sesion_maestro.php">Cerar Sesion</a>
                     </li>
                 </ul>
             </div>

@@ -17,12 +17,12 @@
         </div>
     </nav>
     <div class="container">
-        <h2 class="text-center py-4">Bienvenido al registro para alumno</h2>
+        <h2 class="text-center py-4">Bienvenido al registro para administradores</h2>
         </div>
     
-        <form action="guardar_alumnos.php" class="diseño_formulario" method="post">
+        <form action="guardar_administradores.php" class="diseño_formulario" method="post">
 
-        <h3 class="text-center">Alumno</h3>
+        <h3 class="text-center">Administradores</h3>
         <p class="text-center">Por favor ingresa tus datos</p>
 
         <label class="py-2" for="">Nombre</label>

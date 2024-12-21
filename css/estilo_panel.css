@@ -1,99 +1,120 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body{
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .navbar-custom {
-    background-color: #dab0ae;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-size: 16px;
+  line-height: 24px;
+}
+.navbar-custom {
+  background-color: #dab0ae;
 }
 .hola{
-    text-align: center;
+  text-align: center;
 }
 .tap-buttons{
-    display: flex;
+  display: flex;
 }
 .tab-button{
-    background-color: #ffffffff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    height: 40px;
+  background-color: #ffffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 40px;
 }
 .tab-button:hover{
-    background-color: #ddd;
+  background-color: #ddd;
 }
 .tab{
-    display: none;
-    width: 45%;
-    padding: 25px;
-    border: 2px rgba(255, 255, 255, 0.2) solid;
-    background: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-    border-top-right-radius: 9px;
-    border-top-left-radius: 9px;
+  display: none;
+  width: 45%;
+  padding: 25px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
 
 }
 .active-tab-button{
-    border: 2px rgba(255, 255, 255, 0.2) solid;
-    background: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
-    transform: scaleY(1.1);
-    transform-origin: bottom;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+  transform: scaleY(1.1);
+  transform-origin: bottom;
 }
 .btn_ingresar{
-    background-color: #6e3730;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 9px;
-    transition: 0.5s;
+  background-color: #6e3730;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 9px;
+  transition: 0.5s;
 }
 .btn_ingresar:hover{
-    background-color: #5a2f2a;
+  background-color: #5a2f2a;
 }
 .divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    max-width: 500px;
-    margin: 20px auto;
-  }
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 20px auto;
+}
 
-  .divider::before,
-  .divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #ddd;
-  }
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
 
-  .divider-text {
-    padding: 0 10px;
-    color: #666;
-    font-family: sans-serif;
-  }
-  .btn_registrate{
-    border: 1px #6e3730 solid;
-    padding: 10px 20px;
-    width: 100%;
-    border-radius: 9px;
-    transition: 0.5s;
-    color: #6e3730;
-    text-decoration: none;
-    display: inline-block;
-  }
-  .btn_registrate:hover{
-    color: white;
-    background-color: #5a2f2a;
+.divider-text {
+  padding: 0 10px;
+  color: #666;
+  font-family: sans-serif;
+}
+.btn_registrate{
+  border: 1px #6e3730 solid;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 9px;
+  transition: 0.5s;
+  color: #6e3730;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn_registrate:hover{
+  color: white;
+  background-color: #5a2f2a;
 }
 .forgot-pass{
-    color: #6e3730;
-    text-decoration: none;
-    
+  color: #6e3730;
+  text-decoration: none;
+  
+}
+
+
+/* DISEÑO DE LOS FORMULARIOS */
+.diseño_formulario
+{
+width: 500px;
+border: 2px rgba(255, 255, 255, 0.2) solid;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    border-bottom-left-radius: 9px;
+margin: auto;
+}
+
+
+/* error al ingresar sus datos incorrectos */
+
+.aviso_error
+{
+color: red;
+background-color: pink;
+font-size: 20px;
+
 }

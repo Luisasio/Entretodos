@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +27,20 @@
                 <button class="tab-button" onclick="toggleTab(2)">Administrador</button>
             </div>
             <div class="tab" id="tab1">
-                <form action="">
+                <form action="autenticar.php" method="post">
+                <?php 
+        $errorusuario = isset($_GET["errorusuario"]);
+        if($errorusuario == "SI"){
+            echo '<h3 class="aviso_error"> Datos incorrectos  </h3> <br><br>';
+        }
+      ?>
                     <h3 class="text-center">Alumno</h3>
                     <p class="text-center">Por favor ingresa tus datos</p>
                     <label class="py-2" for="">Correo</label>
-                    <input class="form-control tamaño_form" type="text" name="" id="" placeholder="Correo@ejemplo.com">
+                    <input class="form-control tamaño_form" type="text" name="correo" id="" placeholder="Correo@ejemplo.com">
                     <label class="py-2" for="">Contraseña</label>
                     <div style="position: relative;">
-                        <input class="form-control" type="password" name="" id="passwordInput" placeholder="password">
+                        <input class="form-control" type="password" name="contrasena" id="passwordInput" placeholder="password">
                         <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer;">
                             <i class="fas fa-eye" id="eyeIcon"></i>
                         </button>
@@ -48,17 +55,24 @@
                         </div>
                         <a href="registro.php" class="btn_registrate">Regístrate</a>
                     </div>
+                    <input type="hidden" name="tipo_usuario" value="alumno">
                 </form>
             </div>
             <div class="tab" id="tab2">
-                <form action="">
+                <form action="autenticar.php" method="post">
+                <?php 
+        $errorusuario = isset($_GET["errorusuario"]);
+        if($errorusuario == "SI"){
+            echo '<h3 class="aviso_error"> Datos incorrectos  </h3> <br><br>';
+        }
+      ?>
                     <h3 class="text-center">Maestro</h3>
                     <p class="text-center">Por favor ingresa tus datos</p>
                     <label class="py-2" for="">Correo</label>
-                    <input class="form-control tamaño_form" type="text" name="" id="" placeholder="Correo@ejemplo.com">
+                    <input class="form-control tamaño_form" type="text" name="correo" id="" placeholder="Correo@ejemplo.com">
                     <label class="py-2" for="">Contraseña</label>
                     <div style="position: relative;">
-                        <input class="form-control" type="password" name="" id="passwordInput" placeholder="password">
+                        <input class="form-control" type="password" name="contrasena" id="passwordInput" placeholder="password">
                         <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer;">
                             <i class="fas fa-eye" id="eyeIcon"></i>
                         </button>
@@ -71,19 +85,26 @@
                         <div class="divider">
                             <span class="divider-text">ó</span>
                         </div>
-                        <button class="btn_registrate" type="submit">Regístrate</button>
+                        <a href="registro_maestros.php" class="btn_registrate">Regístrate</a>
                     </div>
+                    <input type="hidden" name="tipo_usuario" value="maestro">
                 </form>
             </div>
             <div class="tab" id="tab3">
-                <form action="">
+                <form action="autenticar.php" method="post">
+                <?php 
+        $errorusuario = isset($_GET["errorusuario"]);
+        if($errorusuario == "SI"){
+            echo '<h3 class="aviso_error"> Datos incorrectos  </h3> <br><br>';
+        }
+      ?>
                     <h3 class="text-center">Administrador</h3>
                     <p class="text-center">Por favor ingresa tus datos</p>
                     <label class="py-2" for="">Correo</label>
-                    <input class="form-control tamaño_form" type="text" name="" id="" placeholder="Correo@ejemplo.com">
+                    <input class="form-control tamaño_form" type="text" name="correo" id="" placeholder="Correo@ejemplo.com">
                     <label class="py-2" for="">Contraseña</label>
                     <div style="position: relative;">
-                        <input class="form-control" type="password" name="" id="passwordInput" placeholder="password">
+                        <input class="form-control" type="password" name="contrasena" id="passwordInput" placeholder="password">
                         <button type="button" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: none; background: none; cursor: pointer;">
                             <i class="fas fa-eye" id="eyeIcon"></i>
                         </button>
@@ -92,6 +113,14 @@
                     <a href="" class="forgot-pass mb-3">¿Olvidaste tu contraseña?</a>
                     <br><br>
                     <button class="btn_ingresar" type="submit">Ingresar</button>
+                    <div class="text-center my-3">
+                        <div class="divider">
+                            <span class="divider-text">ó</span>
+                        </div>
+                        <a href="registro_administrador.php" class="btn_registrate">Regístrate</a>
+                    </div>
+                    <input type="hidden" name="tipo_usuario" value="administrador">
+                    
                 </form>
             </div>
         </div>

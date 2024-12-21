@@ -1,3 +1,11 @@
+<?php
+session_name('sesion_alumno');
+session_start();
+if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
+    header("Location: ../index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,7 +46,7 @@
         <a href="#">Perfil</a>
         <a href="#">Cursos</a>
         <a href="#">Configuración</a>
-        <a href="#">Cerrar Sesión</a>
+
     </div>
     <div class="content">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,6 +64,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cerrar_sesion_alumno.php">Cerrar Sesion</a>
                     </li>
                 </ul>
             </div>
