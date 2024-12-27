@@ -44,32 +44,11 @@ if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
         <h2>Menú</h2>
         <a href="#">Inicio</a>
         <a href="#">Perfil</a>
-        <a href="#">Cursos</a>
+        <a href="dashboard_admin_cursos.php">Cursos</a>
         <a href="#">Configuración</a>
     </div>
     <div class="content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Dashboard Administrador</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Notificaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mensajes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cerrar_sesion_admin.php">Cerrar Sesion</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <?php include "navbar_admin.php"?>
         <h1>Bienvenido al Dashboard</h1>
         <p>Esta es la sección principal del dashboard del Administrador.</p>
     </div>

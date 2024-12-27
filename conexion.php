@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuariobd = "root";
 $contrasena = "";
-$basedatos = "entretodos";
+$basedatos = "entretodos2";
 
 $conectar = mysqli_connect($host, $usuariobd, $contrasena, $basedatos);
 
