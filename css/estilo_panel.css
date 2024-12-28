@@ -7,6 +7,9 @@ body{
   font-size: 16px;
   line-height: 24px;
 }
+a{
+  text-decoration: none;
+}
 .navbar-custom {
   background-color: #dab0ae;
 }
@@ -104,7 +107,8 @@ body{
 {
 width: 500px;
 border: 2px rgba(255, 255, 255, 0.2) solid;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);    border-bottom-left-radius: 9px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+border-bottom-left-radius: 9px;
 margin: auto;
 }
 
@@ -117,4 +121,100 @@ color: red;
 background-color: pink;
 font-size: 20px;
 
+}
+
+/* sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #d47c30;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 20px;
+}
+.sidebar a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+.sidebar a:hover {
+  background-color: #b46a2a;
+}
+.sidebar a.active {
+  background-color: #f5c7c5;
+}
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.contenedor_logo{
+  padding: 10px;
+  text-align: center;
+  /* background-color: #DAB0AE; */
+}
+.logo-sidebar{
+  width: 200px;
+  /* height: 100px;
+  border-radius: 50%;
+  margin: auto; */
+}
+
+/* Diseño de botones */
+.btn_menu1{
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #f07d17;
+  color: #f2f4f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.btn_menu1:hover{
+  background-color: #b46a2a;
+  text-decoration: none;
+  color: white;
+}
+/* formularios */
+
+.btn-guardar-curso{
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #f07d17;
+  color: #f2f4f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.btn-guardar-curso:hover{
+  background-color: #b46a2a;
+  text-decoration: none;
+  color: white;
+}
+.btn-cancelar-curso{
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #c50000;
+  color: #f2f4f6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.btn-cancelar-curso:hover{
+  background-color: #970000;
+  text-decoration: none;
+  color: white;
 }

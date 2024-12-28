@@ -12,43 +12,20 @@ if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Administrador</title>
+    <script src="https://kit.fontawesome.com/fe8b02346c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilo_panel.css">
     <style>
         body {
             display: flex;
         }
-        .sidebar {
-            width: 250px;
-            height: 100vh;
-            background-color: #343a40;
-            color: white;
-            padding: 20px;
-        }
-        .sidebar a {
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #575d63;
-        }
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-        }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Menú</h2>
-        <a href="#">Inicio</a>
-        <a href="#">Perfil</a>
-        <a href="dashboard_admin_cursos.php">Cursos</a>
-        <a href="#">Configuración</a>
-    </div>
+    <?php include "sidebar_admin.php";?>
     <div class="content">
         <?php include "navbar_admin.php"?>
+        <br>
         <h1>Bienvenido al Dashboard</h1>
         <p>Esta es la sección principal del dashboard del Administrador.</p>
     </div>
