@@ -32,7 +32,7 @@ if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
               <div class="card-header">
                 <h3 class="card-title">Detalles del curso</h3>
               </div>
-              <form action="" method="POST">
+              <form action="guardar_curso.php" method="POST">
                 <div class="card-body">
                     <div class="form-group">
                         <label for="">Seleccione la modalidad del curso:</label>
@@ -40,6 +40,21 @@ if (!isset($_SESSION["autentificado"]) || $_SESSION["autentificado"] != "SI") {
                             <option value="" selected>Seleccione una modalidad</option>
                             <option value="Taller">Taller</option>
                             <option value="Curso">Curso</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Maestro asignado a esa materia:</label>
+                        <select class="form-control" id="maestro" name="maestro">
+                            <option value="" selected>Seleccione al maestro</option>
+                            <?php
+                            require "../conexion.php";
+
+                            $todos_maestros = "SELECT * FROM registro_maestros ORDER BY id_maestros";
+                            $resultado = mysqli_query($conectar, $todos_maestros);
+                            while($fila_maestro = mysqli_fetch_assoc($resultado)){
+                            ?>
+                            <option value="<?php echo $fila_maestro['id_maestros'];?>"><?php echo $fila_maestro['nombre'];?>&nbsp<?php echo  $fila_maestro['apellidos']; ?></option>
+                            <?php }?>
                         </select>
                     </div>
                     <div class="form-group">

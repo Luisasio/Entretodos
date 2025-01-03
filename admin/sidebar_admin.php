@@ -11,4 +11,8 @@
         <i class="fa-solid fa-graduation-cap"></i>
             <span style="padding-left: 10px;">Cursos</span>
         </a>
+        <a href="dashboard_admin_grupos.php">
+        <i class="fa-solid fa-users-between-lines"></i>
+            <span style="padding-left: 10px;">Grupos</span>
+        </a>
 </div>
