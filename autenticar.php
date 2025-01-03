@@ -58,7 +58,7 @@ switch ($tipo_usuario) {
             $_SESSION['id_administrador'] = $usuario['id_administrador'];
             $_SESSION["autentificado"] = "SI";
             setcookie("usuario_admin", $correo, time() + 3600);
-            header("Location: admin/dashboard_admin.php");
+            header("Location: admin/dasboard_admin.php");
             exit();
         }
         break;

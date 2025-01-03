@@ -18,7 +18,7 @@
         </div>
     </nav>
     <div class="container">
-        <h2 class="text-center py-4">Bienvenido a Entretodo</h2>
+        <h2 class="text-center py-4">Bienvenido a Entretodos</h2>
         <h4 class="text-center">Identifíquese</h4>
         <div class="row justify-content-center py-4">
             <div class="tab-buttons text-center">
